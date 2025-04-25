@@ -38,6 +38,13 @@ const menuItems = [
     price: "$3.50",
     icon: <FaCoffee className="text-yellow-500 w-8 h-8" />,
   },
+  {
+    id: 6,
+    name: "Brownie",
+    description: "Rich and fudgy brownie with a chocolatey flavor.",
+    price: "$5.00",
+    icon: <FaCookieBite className="text-yellow-500 w-8 h-8" />,
+  },
 ];
 
 export default function Menu() {

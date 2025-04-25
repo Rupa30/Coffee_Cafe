@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaGit, FaGithub, FaLinkedinIn, FaFile, FaFileDownload, FaFilePdf } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -8,14 +8,14 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Coffee Cafe. All rights reserved.</p>
         <p>Made by Rupa☕</p>
         <div className="flex space-x-6 text-yellow-300">
-          <a href="#" aria-label="Facebook" className="hover:text-yellow-400 transition">
-            <FaFacebookF size={20} />
+          <a href="https://www.linkedin.com/in/rupa-mahindrakar1/" target="_blank" aria-label="Twitter" className="hover:text-yellow-400 transition">
+            <FaLinkedinIn size={20} />
           </a>
-          <a href="#" aria-label="Twitter" className="hover:text-yellow-400 transition">
-            <FaTwitter size={20} />
+          <a href="https://github.com/Rupa30" target="_blank" aria-label="Instagram" className="hover:text-yellow-400 transition">
+            <FaGithub size={20} />
           </a>
-          <a href="#" aria-label="Instagram" className="hover:text-yellow-400 transition">
-            <FaInstagram size={20} />
+          <a href="https://drive.google.com/file/d/1XK4gfCe1VbVS7R6UH2oBg-Rx53Khsczt/view?usp=drivesdk" target="_blank" aria-label="Instagram" className="hover:text-yellow-400 transition">
+            <FaFilePdf size={20} />
           </a>
         </div>
       </div>

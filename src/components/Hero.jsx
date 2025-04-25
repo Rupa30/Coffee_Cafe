@@ -33,13 +33,13 @@ export default function Hero() {
         <div className="flex space-x-6">
           <a
             href="#menu"
-            className="bg-[#4B2E0E] text-yellow-300 px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-400 hover:text-[#4B2E0E] transition"
+            className="bg-[#4B2E0E] text-yellow-300 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-400 hover:text-[#4B2E0E] transition"
           >
             View Menu
           </a>
           <a
             href="#contact"
-            className="border-2 border-[#4B2E0E] text-[#4B2E0E] px-8 py-3 rounded-lg font-semibold hover:bg-[#4B2E0E] hover:text-yellow-300 transition"
+            className="border-2 border-[#4B2E0E] text-[#4B2E0E] px-6 py-3 rounded-lg font-semibold hover:bg-[#4B2E0E] hover:text-yellow-300 transition"
           >
             Contact Us
           </a>

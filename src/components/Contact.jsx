@@ -8,15 +8,26 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   function handleChange(e) {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setError(false); // Clear error on input change
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    // For demo, just simulate submission
+    const { name, email, message } = formData;
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setError(true);
+      setSubmitted(false);
+      return;
+    }
+
+    // Simulate submission
     setSubmitted(true);
+    setError(false);
     setFormData({ name: "", email: "", message: "" });
   }
 
@@ -56,11 +67,15 @@ export default function Contact() {
               Thank you for your message! We'll get back to you soon.
             </p>
           )}
+          {error && (
+            <p className="text-red-600 font-semibold text-center">
+              Please fill in all the fields before submitting.
+            </p>
+          )}
           <input
             type="text"
             name="name"
             placeholder="Your Name"
-            required
             value={formData.name}
             onChange={handleChange}
             className="border border-yellow-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -69,7 +84,6 @@ export default function Contact() {
             type="email"
             name="email"
             placeholder="Your Email"
-            required
             value={formData.email}
             onChange={handleChange}
             className="border border-yellow-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -78,7 +92,6 @@ export default function Contact() {
             name="message"
             placeholder="Your Message"
             rows="5"
-            required
             value={formData.message}
             onChange={handleChange}
             className="border border-yellow-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"

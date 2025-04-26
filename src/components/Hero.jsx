@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-r from-yellow-100 via-yellow-50 to-yellow-100 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 md:py-40 mt-16"
+      className="relative bg-gradient-to-r from-yellow-100 via-yellow-50 to-yellow-100 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 md:py-40 mt-16"
     >
       {/* Left Content */}
       <motion.div
